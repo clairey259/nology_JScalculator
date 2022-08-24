@@ -1,12 +1,23 @@
 .button{
-    &-numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    &_numbers{
+        background-color: antiquewhite;
 
     }
     &-clear{
 
     }
 
-    &-operators{
+    &_operators{
         
+        &-clear{
+
+        }
+        &-equals{
+            
+        }
     }
+        
 }
