@@ -1,7 +1,42 @@
-.button{
+.calculator_container{
+ margin: .4rem;
+//for phone screens
+@media only screen and (max-width: 600px) {
+        
+}
+
+// for above phone screen size
+@media only screen and (min-width: 601px) {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+}
+
+.display {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    background-color: lightgray;
+    border: .4rem;
+    padding: .2rem;
+}
+
+.buttons_container {
+    display: grid;
+    grid-template-columns:  auto auto auto auto;
+    gap: .2rem;
+    background-color: black;
+    padding: .4rem;
+    
+    
+    
+}
+
+.button {
+    
+
     &_numbers{
         background-color: antiquewhite;
 
@@ -12,7 +47,7 @@
             background-color: peachpuff;       
         }
         &-equals{
-            grid-column: 3/4;
+            grid-area: span 2;
         }
     }
         
