@@ -1,54 +1,61 @@
-.calculator_container{
- margin: .4rem;
-//for phone screens
-@media only screen and (max-width: 600px) {
-        
-}
+.calculator_container {
+  margin: 0.4rem;
+  height: 60vh;
+  width: auto;
+  border: black dotted 2px;
+  //for phone screens
+  @media only screen and (max-width: 600px) {
+    margin-top: 10vh;
+    font-size: 1.2rem;
+  }
 
-// for above phone screen size
-@media only screen and (min-width: 601px) {
+  // for above phone screen size
+  @media only screen and (min-width: 601px) {
     margin-left: 30vw;
     margin-right: 30vw;
     margin-top: 10vh;
     margin-bottom: 10vh;
-}
-
+    font-size: 1.5rem;
+  }
 }
 
 .display {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: lightgray;
-    border: .4rem;
-    padding: .2rem;
+  display: grid;
+  width: auto;
+  height: 10vh;
+  grid-template-columns: auto;
+  background-color: lightgray;
+  border: black solid 0.4rem;
+  padding: 0.5rem;
+  justify-content: right;
+  align-content: center;
 }
 
 .buttons_container {
-    display: grid;
-    grid-template-columns:  auto auto auto auto;
-    gap: .2rem;
-    background-color: black;
-    padding: .4rem;
-    
-    
-    
+  display: grid;
+  width: auto;
+  height: 60vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.2rem;
+  background-color: black;
+  padding: 0.4rem;
 }
 
 .button {
-    
-
-    &_numbers{
-        background-color: antiquewhite;
-
+  font-size: larger;
+  &_numbers {
+    background-color: antiquewhite;
+  }
+  &_operators {
+    background-color: lightcoral;
+    &-mod {
+      background-color: peachpuff;
     }
-    &_operators{
-        background-color: lightcoral;
-        &-clear{
-            background-color: peachpuff;       
-        }
-        &-equals{
-            grid-area: span 2;
-        }
+    &-equals {
+      background-color: peachpuff;
+      grid-column-start: 3;
+      grid-column-end: 5;
     }
-        
+  }
 }
