@@ -1,5 +1,14 @@
 .calculator_container {
   margin: 0.4rem;
+  height: 60vh;
+  width: auto;
+  border: black dotted 2px;
+}
+@media only screen and (max-width: 600px) {
+  .calculator_container {
+    margin-top: 10vh;
+    font-size: 1.2rem;
+  }
 }
 @media only screen and (min-width: 601px) {
   .calculator_container {
@@ -7,36 +16,49 @@
     margin-right: 30vw;
     margin-top: 10vh;
     margin-bottom: 10vh;
+    font-size: 1.5rem;
   }
 }
 
 .display {
   display: grid;
+  width: auto;
+  height: 10vh;
   grid-template-columns: auto;
   background-color: lightgray;
-  border: 0.4rem;
-  padding: 0.2rem;
+  border: black solid 0.4rem;
+  padding: 0.5rem;
+  justify-content: right;
+  align-content: center;
 }
 
 .buttons_container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  width: auto;
+  height: 60vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 0.2rem;
   background-color: black;
   padding: 0.4rem;
 }
 
+.button {
+  font-size: larger;
+}
 .button_numbers {
   background-color: antiquewhite;
 }
 .button_operators {
   background-color: lightcoral;
 }
-.button_operators-clear {
+.button_operators-mod {
   background-color: peachpuff;
 }
 .button_operators-equals {
-  grid-area: span 2;
+  background-color: peachpuff;
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -60,7 +82,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: monospace;
   vertical-align: baseline;
 }
 
