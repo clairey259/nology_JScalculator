@@ -6,17 +6,13 @@
         background-color: antiquewhite;
 
     }
-    &-clear{
-
-    }
-
     &_operators{
-        
+        background-color: lightcoral;
         &-clear{
-
+            background-color: peachpuff;       
         }
         &-equals{
-            
+            grid-column: 3/4;
         }
     }
         
