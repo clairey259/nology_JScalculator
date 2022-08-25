@@ -3,14 +3,15 @@
   height: fit-content;
   width: fit-content;
   border: black dotted 2px;
-  //for phone screens
-  @media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+  .calculator_container {
     margin-top: 10vh;
     font-size: 1.2rem;
   }
-
-  // for above phone screen size
-  @media only screen and (min-width: 601px) {
+}
+@media only screen and (min-width: 601px) {
+  .calculator_container {
     margin-left: 30vw;
     margin-right: 30vw;
     margin-top: 10vh;
@@ -40,14 +41,15 @@
   gap: 0.2rem;
   background-color: black;
   padding: 0.4rem;
-  //for phone screens
-  @media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
+  .buttons_container {
     width: 100vh;
     height: 100vh;
   }
-
-  // for above phone screen size
-  @media only screen and (min-width: 601px) {
+}
+@media only screen and (min-width: 601px) {
+  .buttons_container {
     height: 60vh;
     width: 20rem;
   }
@@ -56,18 +58,18 @@
 .button {
   font-size: larger;
   font: black;
-  &_numbers {
-    background-color: antiquewhite;
-  }
-  &_operators {
-    background-color: lightcoral;
-    &-mod {
-      background-color: peachpuff;
-    }
-    &-equals {
-      background-color: peachpuff;
-      grid-column-start: 3;
-      grid-column-end: 5;
-    }
-  }
+}
+.button_numbers {
+  background-color: antiquewhite;
+}
+.button_operators {
+  background-color: lightcoral;
+}
+.button_operators-mod {
+  background-color: peachpuff;
+}
+.button_operators-equals {
+  background-color: peachpuff;
+  grid-column-start: 3;
+  grid-column-end: 5;
 }

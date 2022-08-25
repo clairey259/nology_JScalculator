@@ -1,10 +1,6 @@
 .calculator_container {
   margin: 0.4rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   border: black dotted 2px;
 }
@@ -38,9 +34,7 @@
 
 .buttons_container {
   display: grid;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  min-width: fit-content;
   height: 60vh;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -48,10 +42,22 @@
   background-color: black;
   padding: 0.4rem;
 }
+@media only screen and (max-width: 600px) {
+  .buttons_container {
+    width: 100vh;
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .buttons_container {
+    height: 60vh;
+    width: 20rem;
+  }
+}
 
 .button {
   font-size: larger;
-  font-color: black;
+  font: black;
 }
 .button_numbers {
   background-color: antiquewhite;
@@ -122,4 +128,4 @@ table {
   border-spacing: 0;
 }
 
-/* End reset styles *//*# sourceMappingURL=master_styles.css.map */
+/* End reset styles */
