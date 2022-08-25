@@ -1,17 +1,12 @@
 .calculator_container {
+  display: flex;
+  flex-direction: column;
   margin: 0.4rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border: black dotted 2px;
 }
 @media only screen and (max-width: 600px) {
   .calculator_container {
-    margin-top: 10vh;
     font-size: 1.2rem;
+    max-width: 96vw;
   }
 }
 @media only screen and (min-width: 601px) {
@@ -25,33 +20,47 @@
 }
 
 .display {
-  display: grid;
+  display: flex;
   width: auto;
   height: 10vh;
-  grid-template-columns: auto;
   background-color: lightgray;
   border: black solid 0.4rem;
   padding: 0.5rem;
   justify-content: right;
   align-content: center;
+  font-size: 2rem;
+}
+@media only screen and (min-width: 601px) {
+  .display {
+    max-width: 487px;
+  }
 }
 
 .buttons_container {
   display: grid;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 60vh;
+  width: auto;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 0.2rem;
   background-color: black;
   padding: 0.4rem;
 }
+@media only screen and (max-width: 600px) {
+  .buttons_container {
+    height: 82vh;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .buttons_container {
+    height: 60vh;
+    max-width: 500px;
+  }
+}
 
 .button {
-  font-size: larger;
-  font-color: black;
+  font-size: 3rem;
+  font: black;
+  border-radius: 0.5rem;
 }
 .button_numbers {
   background-color: antiquewhite;
@@ -122,4 +131,4 @@ table {
   border-spacing: 0;
 }
 
-/* End reset styles *//*# sourceMappingURL=master_styles.css.map */
+/* End reset styles */
