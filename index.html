@@ -11,27 +11,27 @@
 
   <body>
     <div class="calculator_container">
-      <div class="display">"answer will show"</div>
+      <div id="display" class="display"></div>
       <div class="buttons_container">
-        <button class="button button_operators button_operators-mod">C</button>
-        <button class="button button_operators">+/-</button>
-        <button class="button button_operators">%</button>
-        <button class="button button_operators">/</button>
-        <button class="button button_numbers">7</button>
-        <button class="button button_numbers">8</button>
-        <button class="button button_numbers">9</button>
-        <button class="button button_operators">x</button>
-        <button class="button button_numbers">4</button>
-        <button class="button button_numbers">5</button>
-        <button class="button button_numbers">6</button>
-        <button class="button button_operators">-</button>
-        <button class="button button_numbers">1</button>
-        <button class="button button_numbers">2</button>
-        <button class="button button_numbers">3</button>
-        <button class="button button_operators">+</button>
-        <button class="button button_numbers button_operators-mod">0</button>
-        <button class="button button_operators button_operators-mod">.</button>
-        <button class="button button_operators button_operators-equals">=</button>
+        <button id="buttonClear" class="button button_operators button_operators-mod" onclick="handleButtonPressClear(event)">C</button>
+        <button id="buttonPosNeg" class="button button_operators" onclick="handleButtonPressPosNeg(event)">+/-</button>
+        <button id="buttonPercent" class="button button_operators" onclick="handleButtonPress(event)">%</button>
+        <button id="buttonDivide" class="button button_operators" onclick="handleButtonPress(event)">/</button>
+        <button id="buttonSeven" class="button button_numbers" onclick="handleButtonPress(event)">7</button>
+        <button id="buttonEight" class="button button_numbers" onclick="handleButtonPress(event)">8</button>
+        <button id="buttonNine" class="button button_numbers" onclick="handleButtonPress(event)">9</button>
+        <button id="buttonMultiply" class="button button_operators" onclick="handleButtonPress(event)">x</button>
+        <button id="buttonFour" class="button button_numbers" onclick="handleButtonPress(event)">4</button>
+        <button id="buttonFive" class="button button_numbers" onclick="handleButtonPress(event)">5</button>
+        <button id="buttonSix" class="button button_numbers" onclick="handleButtonPress(event)">6</button>
+        <button id="buttonMinus" class="button button_operators" onclick="handleButtonPress(event)">-</button>
+        <button id="buttonOne" class="button button_numbers" onclick="handleButtonPress(event)">1</button>
+        <button id="buttonTwo" class="button button_numbers" onclick="handleButtonPress(event)">2</button>
+        <button id="buttonThree" class="button button_numbers" onclick="handleButtonPress(event)">3</button>
+        <button id="buttonPlus" class="button button_operators" onclick="handleButtonPress(event)">+</button>
+        <button id="buttonZero" class="button button_numbers button_operators-mod"  onclick="handleButtonPress(event)">0</button>
+        <button id="buttonPoint" class="button button_operators button_operators-mod"  onclick="handleButtonPress(event)">.</button>
+        <button id="buttonEquals" class="button button_operators button_operators-equals"  onclick="handleButtonPressEquals(event)">=</button>
       </div>
     </div>
   </body>
