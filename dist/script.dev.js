@@ -28,9 +28,35 @@ function handleButtonPressPosNeg() {
   element.innerHTML = value;
 }
 
-function handleButtonPressClear(event) {}
+function handleButtonPressClear(event) {
+  var output = document.getElementById("display");
+  output.innerHTML = "";
+} // function handleButtonPressEquals(event) {
+//     const output = document.getElementById("display");
+//     const value = output.innerHTML
+//     output.innerHTML = eval(value)
+// }
 
-function handleButtonPressEquals(event) {} // function handleLongInput() {
+
+function handleButtonPressEquals(event) {
+  var output = document.getElementById("display");
+  var str = output.innerHTML;
+
+  var compute = function compute() {
+    var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var total = 0;
+    str = str.match(/[+\−]*(\.\d+|\d+(\.\d+)?)/g) || [];
+
+    while (str.length) {
+      total += parseFloat(str.shift());
+    }
+
+    ;
+    return total;
+  };
+
+  output.innerHTML = compute(str);
+} // function handleLongInput() {
 //     const input = document.getElementById("display");
 //     if (input.length > 15){
 //         ??

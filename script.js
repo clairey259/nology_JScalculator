@@ -26,12 +26,31 @@ function handleButtonPressPosNeg() {
 }
 
 function handleButtonPressClear(event) {
-
+    const output = document.getElementById("display");
+    output.innerHTML = ""
 }
+
+// function handleButtonPressEquals(event) {
+//     const output = document.getElementById("display");
+//     const value = output.innerHTML
+//     output.innerHTML = eval(value)
+// }
 
 function handleButtonPressEquals(event) {
-
+    const output = document.getElementById("display");
+    const str = output.innerHTML;
+    const compute = (str = '') => {
+       let total = 0;
+       str = str.match(/[+\−]*(\.\d+|\d+(\.\d+)?)/g) || [];
+       while (str.length) {
+          total += parseFloat(str.shift());
+       };
+       return total;
+    };
+    output.innerHTML = compute(str);
 }
+
+
 
 // function handleLongInput() {
 //     const input = document.getElementById("display");
