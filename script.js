@@ -158,8 +158,8 @@ function handleButtonPressEquals(event) {
 }
 
 function handleLongInput() {
-    const input = document.getElementById("display");
-    if (input.length > 15){
-        
-    }
+  const input = document.getElementById("display");
+  if (input.length > 15){
+      
+  }
 }
